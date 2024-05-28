@@ -10,14 +10,14 @@ class CursoController extends Controller
 {
     public function listar(){
         
-        $profile = Profile::find(1);
-        return $profile;
+        //$profile = Profile::find(1);
+        //return $profile;
 
         // $user=User::find(2);
         // return $user->profile;
 
-        // $cursos = Curso::orderBy('id', 'desc')->get();
-        // return view('curso.listar', compact('cursos'));
+         $cursos = Curso::orderBy('id', 'desc')->get();
+         return view('curso.listar', compact('cursos'));
 
     }
     
